@@ -53,8 +53,8 @@ async def type_and_send(message):
 @luna.on_message(filters.command("repo") & ~filters.edited)
 async def repo(_, message):
     await message.reply_text(
-        "[GitHub](https://github.com/thehamkercat/LunaChatBot)"
-        + " | [Group](t.me/PatheticProgrammers)",
+        "[GitHub](https://t.me/KhiladiKing45)"
+        + " | [Group](t.me/Tamilchat07)",
         disable_web_page_preview=True,
     )
 
@@ -64,6 +64,17 @@ async def start(_, message):
     await luna.send_chat_action(message.chat.id, "typing")
     await sleep(2)
     await message.reply_text("/repo - Get Repo Link")
+    
+    
+    
+@luna.on_message(filters.command("start") & ~filters.edited)
+async def first(_, message):
+    await message.reply_text("Hey, I am Anjel Chat Bot Made By Anjelbots🥰",
+                             reply_markup=InlineKeyboardMarkup(
+                                               [[InlineKeyboardButton(text="Support❄️",url="t.me/Godofanjelsupport")],
+                                                [InlineKeyboardButton(text="Chat Group☘️",url="t.me/TamilChat07")],
+                                               [InlineKeyboardButton(text="Creator🍒",url="https://t.me/KhiladiKing45")]])) 
+    
 
 
 @luna.on_message(

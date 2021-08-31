@@ -72,7 +72,6 @@ async def first(_, message):
     await message.reply_text("Hey, I am Anjel Chat Bot Made By Anjelbots🥰",
                              reply_markup=InlineKeyboardMarkup(
                                                [[InlineKeyboardButton(text="Support❄️",url="t.me/Godofanjelsupport")],
-                                                [InlineKeyboardButton(text="Chat Group☘️",url="t.me/TamilChat07")],
                                                [InlineKeyboardButton(text="Creator🍒",url="https://t.me/KhiladiKing45")]])) 
     
 

@@ -6,6 +6,10 @@ from aiohttp import ClientSession
 from pyrogram import Client, filters, idle
 from Python_ARQ import ARQ
 
+from pyrogram import Client,filters 
+from pyrogram.types import (InlineKeyboardButton,  InlineKeyboardMarkup)
+
+
 is_config = os.path.exists("config.py")
 
 if is_config:
@@ -67,11 +71,12 @@ async def start(_, message):
     
     
     
-@luna.on_message(filters.command("start") & ~filters.edited)
-async def first(_, message):
+@luna.on_message(filters.command(['start']))
+async def start(client, message):
     await message.reply_text("Hey, I am Anjel Chat Bot Made By Anjelbots🥰",
                              reply_markup=InlineKeyboardMarkup(
                                                [[InlineKeyboardButton(text="Support❄️",url="t.me/Godofanjelsupport")],
+                                               [InlineKeyboardButton(text="Chat Group☘️",url="t.me/Tamilchat07")],
                                                [InlineKeyboardButton(text="Creator🍒",url="https://t.me/KhiladiKing45")]])) 
     
 

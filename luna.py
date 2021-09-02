@@ -57,11 +57,14 @@ async def type_and_send(message):
 @luna.on_message(filters.command("repo") & ~filters.edited)
 async def repo(_, message):
     await message.reply_text(
-        "[GitHub](https://t.me/KhiladiKing45)"
-        + " | [Group](t.me/Tamilchat07)",
-        disable_web_page_preview=True,
+        "[Creator](https://t.me/KhiladiKing45)"
+        + " | [Chatting Group](t.me/Tamil_Chat_Empire)",
+        disable_web_page_preview=False,
     )
 
+@luna.on_message(filters.command("chatbot") & ~filters.edited)
+async def repo(_, message):
+    await message.reply_text("Hey I am Anjel")    
 
 @luna.on_message(filters.command("help") & ~filters.edited)
 async def start(_, message):
@@ -91,16 +94,7 @@ def start(client, message):
         )
     )
     
-    else:
-        update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
-                uptime
-            ),
-            parse_mode=ParseMode.HTML,
-        )
-
 @luna.on_message(
-    ~filters.private
     & filters.text
     & ~filters.command("help")
     & ~filters.edited,

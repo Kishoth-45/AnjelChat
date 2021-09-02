@@ -95,6 +95,7 @@ def start(client, message):
     )
     
 @luna.on_message(
+    ~filters.private
     & filters.text
     & ~filters.command("help")
     & ~filters.edited,

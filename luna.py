@@ -71,15 +71,25 @@ async def start(_, message):
     
     
     
-@luna.on_message(filters.command(['start']))
-async def start(client, message):
-    await message.reply_text("Hey, I am Anjel Chat Bot Made By Anjelbots🥰",
-                             reply_markup=InlineKeyboardMarkup(
-                                               [[InlineKeyboardButton(text="Support❄️",url="t.me/Godofanjelsupport")],
-                                               [InlineKeyboardButton(text="Chat Group☘️",url="t.me/Tamilchat07")],
-                                               [InlineKeyboardButton(text="Creator🍒",url="https://t.me/KhiladiKing45")]])) 
-    
-
+@bot.on_message(filters.command(['start']))
+def start(client, message):
+    AnjelBots = f'🍁 𝗛𝗲𝗹𝗹𝗼 @{message.from_user.username}\n\n I AM 🎸 ★ANJEL CHAT★᭄ꦿ [🎶](https://telegra.ph/file/dcaf78e7cbd527013194c.jpg)'
+    message.reply_text(
+        text=AnjelBots, 
+        quote=False,
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton('♻️𝐒𝐔𝐏𝐏𝐎𝐑𝐓❄️', url='https://t.me/GodofAnjelsupport'),
+                    InlineKeyboardButton('⚜️𝐀𝐃𝐃 𝐌𝐄⚜️ ', url='https://t.me/AnjelChatBot?startgroup=true')
+                ],
+                [
+                    InlineKeyboardButton('🍂𝐂𝐇𝐀𝐓𝐓𝐈𝐍𝐆🍃', url='https://t.me/TamilChat07'),
+                    InlineKeyboardButton('🔆𝐂𝐑𝐄𝐀𝐓𝐎𝐑🍒', url='https://t.me/KhiladiKing45')
+                ]
+            ]
+        )
+    )
 
 @luna.on_message(
     ~filters.private

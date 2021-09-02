@@ -71,7 +71,7 @@ async def start(_, message):
     
     
     
-@bot.on_message(filters.command(['start']))
+@luna.on_message(filters.command(['start']))
 def start(client, message):
     AnjelBots = f'🍁 𝗛𝗲𝗹𝗹𝗼 @{message.from_user.username}\n\n I AM 🎸 ★ANJEL CHAT★᭄ꦿ [🎶](https://telegra.ph/file/dcaf78e7cbd527013194c.jpg)'
     message.reply_text(

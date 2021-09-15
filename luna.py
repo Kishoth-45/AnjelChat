@@ -7,7 +7,7 @@ from pyrogram import Client, filters, idle
 from Python_ARQ import ARQ
 
 from pyrogram import Client,filters 
-from pyrogram.types import (InlineKeyboardButton,  InlineKeyboardMarkup)
+from pyrogram.types import (InlineKeyboardButton,  InlineKeyboardMarkup, Message)
 
 
 is_config = os.path.exists("config.py")

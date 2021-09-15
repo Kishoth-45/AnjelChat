@@ -62,7 +62,7 @@ async def repo(_, message):
         disable_web_page_preview=False,
     )
 
-@luna.on_message(filters.command("chatbot") & ~filters.edited)
+@luna.on_message(filters.command(["chatbot", f"chatbot@{U}"]))
 async def repo(_, message):
     await message.reply_text("Hey I am Anjel")    
 
@@ -74,7 +74,7 @@ async def start(_, message):
     
     
     
-@luna.on_message(filters.command(['start']))
+@luna.on_message(filters.command(["start", f"start@{U}"]))
 def start(client, message):
     AnjelBots = f'🍁 𝗛𝗲𝗹𝗹𝗼 @{message.from_user.username}\n\n I AM 🎸 ★ANJEL CHAT★᭄ꦿ [🎶](https://telegra.ph/file/dcaf78e7cbd527013194c.jpg)'
     message.reply_text(

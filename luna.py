@@ -94,6 +94,28 @@ def start(client, message):
         )
     )
     
+    
+
+@luna.on_message(
+    filters.command("start")
+    & filters.group
+    & ~ filters.edited
+)
+async def start(client: Client, message: Message):
+    await message.reply_text(
+        "💁🏻‍♂️ Do you want to search for a YouTube video?",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "🍁Anjel Support🍀 ", url="https://t.me/Godofanjelsupport"
+                    )
+                ]
+            ]
+        )
+    )
+   
+    
 @luna.on_message(
     ~filters.private
     & filters.text

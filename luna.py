@@ -118,12 +118,12 @@ async def start(client: Client, message: Message):
 @luna.on_message(
     ~filters.group
     & filters.text
-    & ~filters.command("help")
+    & ~filters.command("chat")
     & ~filters.edited,
 )
-def chat(client, message):
+async def chat(client: Client, message: Message):
     await message.reply_text(
-        "Hey I am Anjel How Are You?",
+        "Hey I am Anjel. How Are You?",
     )
     
     
